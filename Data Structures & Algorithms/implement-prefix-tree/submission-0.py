@@ -34,4 +34,3 @@ class PrefixTree:
                 return False
             cur = cur.children[c]
         return True
-        
