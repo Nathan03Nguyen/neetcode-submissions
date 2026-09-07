@@ -1,4 +1,4 @@
-class TrieNode():
+class TrieNode:
     def __init__(self):
         self.children = {}
         self.end_of_word = False
@@ -33,4 +33,5 @@ class PrefixTree:
             if c not in cur.children:
                 return False
             cur = cur.children[c]
-        return True        
+        return True
+        
