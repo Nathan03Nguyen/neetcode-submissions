@@ -17,7 +17,7 @@ class Solution:
                 merged_lists.append(self.merge_list(l1, l2))
             lists = merged_lists
         return lists[0]
-    
+
     def merge_list(self, l1, l2):
         dummy = ListNode()
         tail = dummy
