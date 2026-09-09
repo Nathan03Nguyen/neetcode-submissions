@@ -5,7 +5,7 @@ class Solution:
         heapq.heapify(max_heap)
 
         time = 0
-        q = deque()
+        q = deque() # pairs of [cnt, idletime]
 
         while max_heap or q:
             time += 1
