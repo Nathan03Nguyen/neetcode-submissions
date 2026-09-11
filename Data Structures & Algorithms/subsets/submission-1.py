@@ -6,9 +6,8 @@ class Solution:
 
         def backtrack(i):
             if i == len(nums):
-                res.append(sol[:])
+                res.append(sol.copy())
                 return
-
             backtrack(i + 1)
 
             sol.append(nums[i])
