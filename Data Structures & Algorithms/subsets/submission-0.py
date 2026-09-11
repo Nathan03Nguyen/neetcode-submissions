@@ -2,13 +2,13 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         # Time : O(2^n)
         # Space : O(n)
+
         res, sol = [], []
 
         def backtrack(i):
             if i == len(nums):
                 res.append(sol[:])
                 return
-            
             backtrack(i + 1)
 
             sol.append(nums[i])
