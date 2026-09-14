@@ -4,24 +4,19 @@ class Solution:
         for a, b in prerequisites:
             g[a].append(b)
 
-        unvisited = 0
-        visiting = 1
-        visited = 2
+        unvisited, visiting, visited = 0, 1, 2
         states = [unvisited] * numCourses
 
         def dfs(node):
-            state = states[node]
-            if state == visited:
+            if states[node] == visited:
                 return True
-            elif state == visiting:
+            elif states[node] == visiting:
                 return False
-            
             states[node] = visiting
-
             for nei in g[node]:
                 if not dfs(nei):
                     return False
-            
+
             states[node] = visited
             return True
 
