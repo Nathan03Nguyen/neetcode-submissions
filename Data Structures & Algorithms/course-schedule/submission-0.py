@@ -3,7 +3,7 @@ class Solution:
         g = defaultdict(list)
         for a, b in prerequisites:
             g[a].append(b)
-        
+
         unvisited = 0
         visiting = 1
         visited = 2
@@ -21,9 +21,10 @@ class Solution:
             for nei in g[node]:
                 if not dfs(nei):
                     return False
+            
             states[node] = visited
             return True
-        
+
         for i in range(numCourses):
             if not dfs(i):
                 return False
