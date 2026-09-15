@@ -3,7 +3,7 @@ class Solution:
         edges = defaultdict(list)
         for u, v, w in times:
             edges[u].append((v, w))
-        
+
         min_heap = [(0, k)]
         visited = set()
         t = 0
