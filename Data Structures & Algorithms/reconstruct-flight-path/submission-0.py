@@ -4,7 +4,7 @@ class Solution:
         tickets.sort(reverse=True)
         for src, dest in tickets:
             adj[src].append(dest)
-
+        
         res = []
         def dfs(src):
             while adj[src]:
