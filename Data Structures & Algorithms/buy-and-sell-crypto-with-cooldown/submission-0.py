@@ -7,10 +7,10 @@ class Solution:
                 return 0
             if (i, buying) in dp:
                 return dp[(i, buying)]
-
+            
             cooldown = dfs(i + 1, buying)
             if buying:
-                buy = dfs(i + 1, False) - prices[i]
+                buy = dfs(i + 1, not buying) - prices[i]
                 dp[(i, buying)] = max(buy, cooldown)
             else:
                 sell = dfs(i + 2, not buying) + prices[i]
