@@ -9,7 +9,7 @@ class Solution:
                 return 0
             if (i, j) in cache:
                 return cache[(i, j)]
-
+            
             if s[i] == t[j]:
                 cache[(i, j)] = dfs(i + 1, j + 1) + dfs(i + 1, j)
             else:
