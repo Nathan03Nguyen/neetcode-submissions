@@ -21,5 +21,5 @@ class Solution:
             else:
                 e += 1
                 count -= 1
-            res = max(res, count)
+            res = max(count, res)
         return res
