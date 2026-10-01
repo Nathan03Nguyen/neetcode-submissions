@@ -20,6 +20,6 @@ class Solution:
                 count += 1
             else:
                 e += 1
-                count -=1
-            res = max(res, count)
+                count -= 1
+            res = max(count, res)
         return res
